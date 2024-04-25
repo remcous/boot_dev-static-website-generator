@@ -52,7 +52,7 @@ def split_nodes_image(old_nodes):
         if node.text == "":
             continue
         matches = extract_markdown_images(node.text)
-        if matches == None:
+        if matches == []:
             new_nodes.append(node)
         else:
             temp = node.text
@@ -77,7 +77,7 @@ def split_nodes_link(old_nodes):
         if node.text == "":
             continue
         matches = extract_markdown_links(node.text)
-        if matches == None:
+        if matches == []:
             new_nodes.append(node)
         else:
             temp = node.text
